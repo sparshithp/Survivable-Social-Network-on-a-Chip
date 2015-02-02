@@ -1,0 +1,76 @@
+doctype html
+html
+  include includes/head.jade
+  script(src='/js/jquery.cookie.js')
+  script(src='/js/sharestatus_ui.js')
+  //script(src='/js/people.js')
+  title SSNoC - Share Status
+  body
+    include includes/navbar.jade
+    div.container
+      br
+      if userInfo.errMessage != null
+        div.alert.alert-danger#alert #{userInfo.errMessage}
+      if userInfo.infoMessage != null
+        div.alert.alert-info#alert #{userInfo.infoMessage}  
+      if userInfo.successMessage != null
+        div.alert.alert-success#alert #{userInfo.successMessage}                   
+      br            
+      div.well#user_info
+        div.row.user-row
+          div.col-xs-3.col-sm-2.col-md-1.col-lg-1
+            img(src="/img/green-dot.png" height=10)
+            br
+            img(src="/img/photo4.png" height=60)
+          div.col-xs-8.col-sm-9.col-md-10.col-lg-10
+            strong #{userInfo.userName}         
+            hr
+            if userInfo.status == 'GREEN'
+              img(src="/img/sts_ok.png" class='img-circle' height=20)
+              strong I Am OK.
+            else if userInfo.status == 'YELLOW'
+              img(src="/img/sts_help.png" class='img-circle' height=20)
+              strong Need Help (No Threatening Emergency).
+            else if userInfo.status == 'RED'
+              img(src="/img/sts_danger.png" class='img-circle' height=20)
+              Facing Threatening Emergency.
+            else
+              img(src="/img/sts_ok.png" class='img-circle' height=20)
+              strong I Am OK.
+            br
+            p Last Posted Time: #{userInfo.lastPostTime}         
+            
+      hr
+      div.submitStatusDiv
+          form(action='/sharestatus', method='post', id='statusForm')
+            div.form-group
+              laber Please select your status:
+                //select#statusOption.form-control
+                //- var userstatus = #{userInfo.status}
+                select(name='statusOption', id='statusOption', class='form-control')
+                 if userInfo.status == 'GREEN'
+                   option(value='GREEN' selected='true') I Am OK
+                   option(value='YELLOW') Need Help (No Threatening Emergency)
+                   option(value='RED') Facing Threatening Emergency                 
+                 else if userInfo.status == 'YELLOW'
+                   option(value='GREEN') I Am OK
+                   option(value='YELLOW' selected='true') Need Help (No Threatening Emergency)
+                   option(value='RED') Facing Threatening Emergency                 
+                 else if userInfo.status == 'RED'
+                   option(value='GREEN') I Am OK
+                   option(value='YELLOW') Need Help (No Threatening Emergency)
+                   option(value='RED' selected='true') Facing Threatening Emergency
+                 else
+                   option(value='GREEN' selected='true') I Am OK
+                   option(value='YELLOW') Need Help (No Threatening Emergency)
+                   option(value='RED') Facing Threatening Emergency
+                //input.statusOption(type='text' class='form-control' name='statusOption' id="statusOption")
+               
+            div.form-group
+              laber Please input your location or other info:
+                //-var locationDesc = #{locationDesc}
+                input.locationDesc(type="textarea" class="form-control" name="locationDesc" id="locationDesc" placeholder="NASA Research Park." value= "#{userInfo.locationDesc}" )
+                //| <textarea class="form-control" id="description" name="locationDesc"></textarea>
+            button(type="submit" class="btn btn-info btn-lg" id="submitStatusBtn") Submit Status
+      br      
+

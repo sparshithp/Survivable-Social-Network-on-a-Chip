@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.24 sec <<< FAILURE! - in edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest
+saveWallMessageNullUser(edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest)  Time elapsed: 0.016 sec  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<java.lang.Exception> but was<org.junit.ComparisonFailure>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest.saveWallMessageNullUser(ExchangeInfoTest.java:70)
+
+testloadWallMessages(edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest)  Time elapsed: 0.007 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[askhdakshd]> but was:<[YooHoo]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest.testloadWallMessages(ExchangeInfoTest.java:53)
+

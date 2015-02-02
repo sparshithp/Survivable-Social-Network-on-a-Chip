@@ -1,0 +1,25 @@
+doctype html
+html
+  include includes/head.jade
+  script(src='/js/jquery.cookie.js')
+  script(src='/js/analysis.js')
+  title SSNoC - SSNoC Analysis
+  body
+    include includes/navbar.jade
+    div.container
+      br
+      div.input-group.input-group-sm 
+        form(action="/clusters" method= "POST")
+          div.form-group
+            input.name(id="dur" type="number" name="duration" class="form-control" placeholder="Enter the number of hours")
+            br
+            button(class="btn btn-success" id="analysis_btn" type="submit") Analyze
+            
+        br
+        The User clusters are:
+        br
+        div(id="results")
+        if(clusters != undefined)
+          - each val in clusters
+              label #{val}
+              br

@@ -1,0 +1,302 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>edu.cmu.sv.ws.ssnoc</groupId>
+	<artifactId>ssnoc</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>SSNoC Webapp</name>
+
+	<properties>
+		<jersey.version>2.9</jersey.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<slf4j.version>1.7.6</slf4j.version>
+		<log4j.version>2.0-rc1</log4j.version>
+		<hikaricp.version>1.3.8</hikaricp.version>
+		<h2.version>1.4.178</h2.version>
+		<restfuse.version>1.2.0</restfuse.version>
+		<gson.version>2.2.4</gson.version>
+		<jetty-version>8.1.9.v20130131</jetty-version>
+	</properties>
+
+	<dependencies>
+		<!-- JUnit for Unit Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- HikariCP - Connection Pooling -->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>${hikaricp.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- SLF4J - Logging Interface -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
+		<!-- Binding for Log4J -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!-- Log4j API and Core implementation required for binding -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!-- Jersey (JAX-RS) -->
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet-core</artifactId>
+			<!-- use the following artifactId if you don't need servlet 2.x compatibility -->
+			<!-- artifactId>jersey-container-servlet</artifactId -->
+		</dependency>
+
+		<!-- JSON Support for Jersey REST -->
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-moxy</artifactId>
+		</dependency>
+
+		<!-- H2 Database -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2.version}</version>
+		</dependency>
+
+		<!-- For javax.servlet compile dependency -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Gson: Java to Json conversion -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>${gson.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.restfuse</groupId>
+			<artifactId>com.eclipsesource.restfuse</artifactId>
+			<version>${restfuse.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.glassfish.jersey</groupId>
+				<artifactId>jersey-bom</artifactId>
+				<version>${jersey.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<finalName>ssnoc</finalName>
+		<!-- pluginManagement-->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<inherited>true</inherited>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<!-- To have unit tests to be output to specific directory for shippable -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.17</version>
+				<configuration>
+					<!-- these don't appear to have any effect or necessary -->
+					<!-- redirectTestOutputToFile>true</redirectTestOutputToFile -->
+					<!--  aggregate>true</aggregate -->
+					<!-- later try encapsulating the following in reportdirectories - reportdirectory alone is deprecated -->
+					<reportsDirectory>shippable/testresults</reportsDirectory>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.surefire</groupId>
+						<artifactId>surefire-junit4</artifactId>
+						<version>2.7.2</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+			<!-- Add Integration tests folder -->
+			<plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>add-test-source</id>
+            <!--
+                This will help m2eclipse to recognize the folder as source
+                folder after update project configuration.
+            -->
+            <phase>process-resources</phase>
+<!--            <phase>generate-test-sources</phase>-->
+            <goals>
+              <goal>add-test-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>src/it/java</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+			<!-- Integration tests plugin -->
+			<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.13</version>
+        <executions>
+          <execution>
+            <id>integration-test</id>
+            <goals>
+              <goal>integration-test</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>verify</id>
+            <goals>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+			<!-- Jetty Plugin -->
+			<plugin>
+		    <groupId>org.mortbay.jetty</groupId>
+		    <artifactId>jetty-maven-plugin</artifactId>
+		    <version>${jetty-version}</version>
+		    <configuration>
+		     <stopKey>STOP</stopKey>
+		     <stopPort>9999</stopPort>
+		     <scanIntervalSeconds>5</scanIntervalSeconds>
+				 <webAppConfig>
+		     	<contextPath>/${project.artifactId}</contextPath>
+		     </webAppConfig>
+				 <connectors>
+		      <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+		       <port>1234</port>
+		      </connector>
+		     </connectors>
+				 <contextXml>${project.build.testOutputDirectory}/jetty-context.xml</contextXml>
+		    </configuration>
+				<executions>
+		     <execution>
+		      <id>start-jetty</id>
+		      <phase>pre-integration-test</phase>
+		      <goals>
+		       <goal>stop</goal>
+		       <goal>run-war</goal>
+		      </goals>
+		      <configuration>
+		       <scanIntervalSeconds>0</scanIntervalSeconds>
+		       <daemon>true</daemon>
+					 <webAppConfig>
+							<contextPath>/${project.artifactId}</contextPath>
+						</webAppConfig>
+						<connectors>
+						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+							<port>1234</port>
+						</connector>
+						</connectors>
+						<contextXml>${project.build.testOutputDirectory}/jetty-context.xml</contextXml>
+		      </configuration>
+		     </execution>
+		     <execution>
+		      <id>stop-jetty</id>
+		      <phase>post-integration-test</phase>
+		      <goals>
+		       <goal>stop</goal>
+		      </goals>
+		     </execution>
+		    </executions>
+		   </plugin>
+		   
+		   			<!-- cobertura code coverage plugin -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<formats>
+						<format>xml</format>
+						<format>html</format>
+					</formats>
+					<maxmem>256m</maxmem>
+					<aggregate>true</aggregate>
+					<outputDirectory>shippable/codecoverage</outputDirectory>
+				</configuration>
+			</plugin>
+			
+ 			<!-- To delete generated testresults and codecoverage reports with mvn clean --> 
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>shippable/testresults/</directory>
+							<includes>
+								<include>**/*</include>
+								<include>**/*</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+						<fileset>
+							<directory>shippable/codecoverage/</directory>
+							<includes>
+								<include>**/*</include>
+								<include>**/*</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+		   
+		</plugins>
+		<!-- /pluginManagement-->
+	</build>
+</project>

@@ -1,0 +1,45 @@
+doctype html
+html
+  include includes/head.jade
+  script(src='/js/jquery.cookie.js')
+  title SSNoC - Welcome
+  body
+    include includes/navbar.jade
+    div.container.text-center
+      br
+      h3 Welcome to Survivable Social Network on a Chip!!
+      
+      br
+      div.explain
+        br
+      div.row
+        div.col-md-12.col-xs-12
+          h4.text-center Here is a brief explaination of the varius status messages you will find in the directory
+          br
+          br
+          div.row.text-center
+            div.col-xs-3.col-sm-2.col-md-1.col-lg-1
+              img(src="/img/sts_ok.png" height=10)
+            div.col-xs-8.col-sm-9.col-md-10.col-lg-10
+              h5.text-left   I am OK, I do not need help.
+            
+          br
+          div.row 
+            div.col-xs-3.col-sm-2.col-md-1.col-lg-1
+              img(src="/img/sts_help.png" height=10)
+            div.col-xs-8.col-sm-9.col-md-10.col-lg-10
+              h5.text-left   I need help, but this is not a life threatening emergency.
+          br
+          div.row 
+            div.col-xs-3.col-sm-2.col-md-1.col-lg-1
+              img(src="/img/sts_danger.png" height=10)
+            div.col-xs-8.col-sm-9.col-md-10.col-lg-10
+              h5.text-left   I need help now, as this is a life threatening emergency!
+          br
+          br
+          div.row
+            div.col
+              h4.text-center To share your status, click on the share status link in the navigation bar in the next page and you will be provided the options.    
+          br
+          div.row
+            a.btn.btn-info(href='/people') Let's start    

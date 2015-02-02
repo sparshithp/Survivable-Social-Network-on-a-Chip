@@ -1,0 +1,42 @@
+doctype html
+html
+  include includes/head.jade
+  script(src='/js/jquery.cookie.js')
+  script(src='/js/announcement_ui.js')
+  title SSNoC - Announcement
+  body
+    include includes/navbar.jade
+    div.container
+     br
+     div#placeholder
+         //div(class="panel-group" id="accordion")
+         //   div(class="panel panel-default")
+         //       div(class="panel-heading")
+         //           h4(class="panel-title")
+         //               a(data-toggle="collapse" data-parent="#accordion" href="#collapseOne") Collapsible Group Item #1
+         //       div(id="collapseOne" class="panel-collapse collapse in")
+         //           div(class="panel-body") deddeedededededededede test test test test test
+         //
+         //div(class="panel-group" id="accordion")
+         //  div(class="panel panel-default")
+         //     div(class="panel-heading")
+         //         h4(class="panel-title")
+         //            a(data-toggle="collapse" data-parent="#accordion" href="#collapseTwo") Collapsible Group Item #2
+         //     div(id="collapseTwo" class="panel-collapse collapse")
+         //        div(class="panel-body") deddeedededededededede test test test test test
+     br
+     form(class="form-horizontal" role="form")
+
+         div(class="form-group" id="divTitle")
+            label(for="title" class="col-sm-2 control-label") Title
+            div(class="col-sm-10")
+                input(id="title" type="text" class="form-control" )
+
+         div(class="form-group" id="divContent")
+            label(for="content" class="col-sm-2 control-label") Content
+            div(class="col-sm-10")
+                textarea(id="content" rows="5" class="form-control")
+         div(class="form-group" id="divSubmit")
+            div(class="col-sm-offset-2 col-sm-10")
+                button(class="btn btn-primary" id="btn_submit" type="submit") Submit New Announcement
+

@@ -1,0 +1,73 @@
+doctype html
+html
+    include includes/head.jade
+    script(src='/js/jquery.cookie.js')
+    script(src='/js/monperformance_ui.js')
+    title SSNoC - Performance Test
+    body
+        include includes/navbar.jade
+        div.container
+            br
+            div(class="alert alert-danger" role="alert" id="alertBar")
+            br
+            div.input-group.input-group-sm
+              span.input-group-addon Test Seconds
+              input(id="testTime" type="text" class="form-control" placeholder="no more than 5 sec")
+            div.input-group.input-group-sm
+                span.input-group-addon Test Message
+                input(id="testMsg" type="text" class="form-control" placeholder="any text more than 20 characters")
+            //div.input-group.input-group-sm
+            //    span.input-group-addon Message NO.
+            //    input(id="testNumber" type="text" class="form-control" placeholder="large number can cause test down")
+            //div.input-group.input-group-sm
+            //    span.input-group-addon Req Interval.
+            //    input(id="reqInterval" type="text" class="form-control" placeholder="interval of sending req in milliseconds")
+            br
+            div.btn-group
+                button(class="btn btn-success" id="btn_start" )
+                    strong Start
+                button(class="btn btn-danger"  id="btn_stop" )
+                    strong Stop
+                //button(class="btn btn-primary" id="btn_view" )
+                //    strong view
+            br
+            div#spinner
+                label#spinner_txt
+                    Strong  Start Testing...
+                img(src="/img/spinner.gif" id="img-spinner" alt="Loading" height=30 label="Start Monitor...")
+            br
+
+            div(class="panel panel-primary" id = "resultContainer")
+                div(class="panel-heading")
+                    label
+                        | Processed Requests Result
+
+                table(id="resultTable" class="table" )
+                    thead
+                       tr
+                         td Total Posts
+                         td Posts Per Sec
+                         td Total Gets
+                         td Gets Per Sec
+                    tr
+                      td
+                        div(id = "totalPostDiv")
+                      td
+                        div(id = "postDiv")
+                      td
+                        div(id = "totalGetDiv")
+                      td
+                        div(id = "getDiv")
+
+            //br
+            //div(class="panel panel-success" id="postedmessageContainer")
+            //    div(class="panel-heading")
+            //         label
+            //            | Posted Message
+            //    div(id="postedmessage" )
+            //br
+            //div(class="panel panel-success" id="receivedmessageContainer")
+            //    div(class="panel-heading")
+            //         label
+            //            | Received Message
+            //    div(id="receivedmessage")

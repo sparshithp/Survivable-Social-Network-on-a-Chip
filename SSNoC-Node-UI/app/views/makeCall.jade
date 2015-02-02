@@ -1,0 +1,34 @@
+doctype html
+html
+    include includes/head.jade
+    script(src='/js/jquery.cookie.js')
+    script(src='/js/makecall_ui.js')
+    script(src='/js/peer.js')
+    title SSNoC - Make A Call
+    body
+        include includes/navbar.jade
+        div.container.col-md-8.col-md-offset-2
+            //div.alert.alert-info#alert #{userInfo.infoMessage}
+            br
+            //div.alert.alert-info#alert THIS IS ERROR INFORMATION PART
+            input(id="ISend" type="hidden" value="#{ISend}")
+            br
+            div(id="video_container" align="center")
+               span#their_id_span Remote Video:
+                div#their_id
+               br
+               video(id="their-video" autoplay width="320" height="240" )
+               br
+               span#my_id_span Local Video:
+                div#my_id #{me}
+               br
+               video(id="my-video" muted="true" autoplay width="320" height="240")
+            br
+            div.input-group.input-group-sm
+                //span.input-group-addon Call User Id
+                input(id="callToId" type="hidden" value="#{remote}")
+            div.btn-group.col-md-offset-5
+                //button(class="btn btn-success" id="make_call")
+                    //strong Call
+                button(class="btn btn-danger"  id="end_call")
+                    strong End Call

@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.758 sec <<< FAILURE! - in edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest
+loadAllUsersAndTestImmediately(edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest)  Time elapsed: 2.504 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<[[A, B, C, D, E, admin]]> but was:<[[A, B, C, D, E]]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest.loadAllUsersAndTestImmediately(AnalyzeNetworkTest.java:98)
+
+noChatsBetweenAnyUser(edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest)  Time elapsed: 0.025 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<[[A, B, C, D, E, admin]]> but was:<[[A, B, C, D, E]]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest.noChatsBetweenAnyUser(AnalyzeNetworkTest.java:123)
+

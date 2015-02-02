@@ -1,0 +1,25 @@
+doctype html
+html
+  include includes/head.jade
+  script(src='/js/jquery.cookie.js')
+  //script(src='/js/people.js')
+  script(src='/js/wallMessage.js')
+  title SSNoC - Wall
+  body
+    include includes/navbar.jade
+    div.container
+      div.row
+        br
+        h3.text-center Wall
+        br
+        div.col-xs-12.col-md-8.col-md-offset-2
+          div.panel.panel-primary
+            div.panel-heading RECENT CHAT HSTORY
+            div.panel-body
+              ul.media-list#wallMessageList
+                
+            div.panel-footer
+              div.input-group
+                input#inputWallMessage.form-control(type='text', placeholder='Enter Message')
+                span.input-group-btn
+                  button#sendWallMessage.btn.btn-info(type='button') SEND

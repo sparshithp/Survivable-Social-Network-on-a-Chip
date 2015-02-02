@@ -1,0 +1,49 @@
+doctype html
+html
+  include includes/head.jade
+  script(src='/js/jquery.cookie.js')
+  script(src='/js/adminUserProfile.js')
+  title SSNoC - Administer User Profile
+  body
+    include includes/navbar.jade
+    div.container
+      br
+      br
+      h3.text-center.online User List
+      div.well.col-md-8.col-md-offset-2#userList
+      form.form-horizontal(role="form" action="/postProfile")
+        div#profileModal.modal.fade(tabindex="-1" role="dialog")
+          div.modal-dialog
+            div.modal-content
+              div.modal-header
+                button.close(type="button" data-dismiss="modal")
+                  span(aria-hidden="true") &times;
+                h4.modal-title profile
+              div.modal-body
+                input#uid(type="hidden")
+                div.form-group
+                  label.control-label.col-md-4('for'="uname") Username
+                  div.col-md-4
+                    input.form-control.input-medium#uname(type="text")
+                div.form-group
+                  label.control-label.col-md-4('for'="pwd") Password
+                  div.col-md-4
+                    input.form-control.input-password.input-medium#pwd(type="password" placeholder="Password" value="" autocomplete="off")
+                div.form-group
+                  label.control-label.col-md-4('for'="acct") Account status
+                  div.col-md-4
+                    select.form-control#acct
+                      option(value="active") Active
+                      option(value="inactive") Inactive
+                div.form-group
+                  label.control-label.col-md-4('for'="pl") Privilege level
+                  div.col-md-4
+                    select.form-control#pl
+                      option(value="administrator") Administrator
+                      option(value="monitor") Monitor
+                      option(value="coordinator") Coordinator
+                      option(value="citizen") Citizen
+              div.modal-footer
+                button#closeBtn.btn.btn-default(data-dismiss="modal") Close
+                button#SaveBtn.btn.btn-primary(data-dismiss="modal") Save changes
+

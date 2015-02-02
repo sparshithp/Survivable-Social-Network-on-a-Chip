@@ -1,0 +1,28 @@
+doctype html
+html
+  include includes/head.jade
+  script(src='/js/jquery.cookie.js')
+  script(src='/js/monmemory_ui.js')
+  //script(src='/js/people.js')
+  title SSNoC - Monitor Memory
+  body
+    include includes/navbar.jade
+    div.container
+     br
+     div.btn-group
+       button(class="btn btn-success" id="btn_start" )
+        strong Start
+       button(class="btn btn-danger"  id="btn_stop" )
+        strong Stop
+       button(class="btn btn-primary" id="btn_view" )
+        strong view
+     br
+     div#spinner
+       label#spinner_txt
+         Strong  Start Monitor...
+       img(src="/img/spinner.gif" id="img-spinner" alt="Loading" height=30 label="Start Monitor...")
+     br
+     div(class="panel panel-primary" id = "resultContainer")
+         div(class="panel-heading")
+             label
+                | Memory History

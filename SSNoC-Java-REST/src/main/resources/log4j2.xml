@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug" name="SSNj">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>%d %p %c{1.} [%t] %m%n</pattern>
+			</PatternLayout>
+		</Console>
+		<RollingFile name="RollingFile" fileName="logs/ssnj.log"
+			filePattern="logs/$${date:yyyy-MM}/ssnj-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="5 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="200" />
+		</RollingFile>
+		<Async name="Async_Appender">
+			<AppenderRef ref="RollingFile" />
+			<!-- <AppenderRef ref="Console" /> -->
+		</Async>
+	</Appenders>
+	<Loggers>
+		<logger name="edu.cmu.sv" level="trace">
+			<appender-ref ref="Async_Appender" />
+		</logger>
+	</Loggers>
+</Configuration>

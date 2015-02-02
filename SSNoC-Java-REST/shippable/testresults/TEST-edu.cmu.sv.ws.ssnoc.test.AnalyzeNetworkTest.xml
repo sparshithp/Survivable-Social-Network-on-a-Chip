@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest" time="2.706" tests="3" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="24.65-b04"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/qihaozhu/Documents/study/CMU-SE/FSE/project/fse-F14-SB6-SSNoC-Java-REST"/>
+    <property name="java.runtime.version" value="1.7.0_67-b01"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/lc/2y1g9j9x5zz3jdlqczhyw3540000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/qihaozhu/Documents/workspace/luna/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf5701891890594012254.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/qihaozhu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.9.5"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/qihaozhu"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="qihaozhu"/>
+    <property name="java.class.path" value="/Users/qihaozhu/Documents/software/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.5.0.20140605-2032/jars/plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_67"/>
+    <property name="java.ext.dirs" value="/Users/qihaozhu/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/qihaozhu/Documents/study/CMU-SE/FSE/project/fse-F14-SB6-SSNoC-Java-REST/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="loadAllUsersAndTestImmediately" classname="edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest" time="2.504">
+    <failure message="expected:&lt;[[A, B, C, D, E, admin]]&gt; but was:&lt;[[A, B, C, D, E]]&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;[[A, B, C, D, E, admin]]&gt; but was:&lt;[[A, B, C, D, E]]&gt;	at org.junit.Assert.fail(Assert.java:88)	at org.junit.Assert.failNotEquals(Assert.java:743)	at org.junit.Assert.assertEquals(Assert.java:118)	at org.junit.Assert.assertEquals(Assert.java:144)	at edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest.loadAllUsersAndTestImmediately(AnalyzeNetworkTest.java:98)</failure>
+    <system-out><![CDATA[2014-11-26 13:23:01,787 DEBUG Generated plugins in 0.000030000 seconds
+2014-11-26 13:23:01,789 DEBUG Found Plugin Map at jar:file:/Users/qihaozhu/.m2/repository/org/apache/logging/log4j/log4j-core/2.0-rc1/log4j-core-2.0-rc1.jar!/org/apache/logging/log4j/core/config/plugins/Log4j2Plugins.dat
+2014-11-26 13:23:02,037 DEBUG Generated plugins in 0.248711000 seconds
+2014-11-26 13:23:02,118 DEBUG Generated plugins in 0.079317000 seconds
+2014-11-26 13:23:02,125 DEBUG Calling createLayout on class org.apache.logging.log4j.core.layout.PatternLayout for element PatternLayout with params(pattern="%d %p %c{1.} [%t] %m%n", Configuration(SSNj), null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null")
+2014-11-26 13:23:02,213 DEBUG Generated plugins in 0.088086000 seconds
+2014-11-26 13:23:02,215 DEBUG Calling createAppender on class org.apache.logging.log4j.core.appender.ConsoleAppender for element Console with params(PatternLayout(%d %p %c{1.} [%t] %m%n), null, target="SYSTEM_OUT", name="Console", follow="null", ignoreExceptions="null")
+2014-11-26 13:23:02,216 DEBUG Calling createLayout on class org.apache.logging.log4j.core.layout.PatternLayout for element PatternLayout with params(pattern="%d %p %c{1.} [%t] %m%n", Configuration(SSNj), null, charset="null", alwaysWriteExceptions="null", noConsoleNoAnsi="null")
+2014-11-26 13:23:02,217 DEBUG Calling createPolicy on class org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy for element TimeBasedTriggeringPolicy with params(interval="null", modulate="null")
+2014-11-26 13:23:02,218 DEBUG Calling createPolicy on class org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy for element SizeBasedTriggeringPolicy with params(size="5 MB")
+2014-11-26 13:23:02,219 DEBUG Calling createPolicy on class org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy for element Policies with params(Policies={TimeBasedTriggeringPolicy, SizeBasedTriggeringPolicy(size=5242880)})
+2014-11-26 13:23:02,220 DEBUG Calling createStrategy on class org.apache.logging.log4j.core.appender.rolling.DefaultRolloverStrategy for element DefaultRolloverStrategy with params(max="200", min="null", fileIndex="null", compressionLevel="null", Configuration(SSNj))
+2014-11-26 13:23:02,221 DEBUG Calling createAppender on class org.apache.logging.log4j.core.appender.RollingFileAppender for element RollingFile with params(fileName="logs/ssnj.log", filePattern="logs/${date:yyyy-MM}/ssnj-%d{MM-dd-yyyy}-%i.log.gz", append="null", name="RollingFile", bufferedIO="null", immediateFlush="null", Policies(CompositeTriggeringPolicy{TimeBasedTriggeringPolicy, SizeBasedTriggeringPolicy(size=5242880)}), DefaultRolloverStrategy(DefaultRolloverStrategy(min=1, max=200)), PatternLayout(%d %p %c{1.} [%t] %m%n), null, ignoreExceptions="null", advertise="null", advertiseURI="null", Configuration(SSNj))
+2014-11-26 13:23:02,222 DEBUG Starting RollingFileManager logs/ssnj.log
+2014-11-26 13:23:02,314 DEBUG Generated plugins in 0.091027000 seconds
+2014-11-26 13:23:02,315 DEBUG Calling createAppenderRef on class org.apache.logging.log4j.core.config.AppenderRef for element AppenderRef with params(ref="RollingFile", level="null", null)
+2014-11-26 13:23:02,316 DEBUG Calling createAppender on class org.apache.logging.log4j.core.appender.AsyncAppender for element Async with params(AppenderRef={RollingFile}, errorRef="null", blocking="null", bufferSize="null", name="Async_Appender", includeLocation="null", null, Configuration(SSNj), ignoreExceptions="null")
+2014-11-26 13:23:02,318 DEBUG Calling createAppenders on class org.apache.logging.log4j.core.config.plugins.AppendersPlugin for element Appenders with params(Appenders={Console, RollingFile, Async_Appender})
+2014-11-26 13:23:02,319 DEBUG Calling createAppenderRef on class org.apache.logging.log4j.core.config.AppenderRef for element appender-ref with params(ref="Async_Appender", level="null", null)
+2014-11-26 13:23:02,321 DEBUG Calling createLogger on class org.apache.logging.log4j.core.config.LoggerConfig for element logger with params(additivity="null", level="trace", name="edu.cmu.sv", includeLocation="null", AppenderRef={Async_Appender}, Properties={}, Configuration(SSNj), null)
+2014-11-26 13:23:02,321 DEBUG Calling createLoggers on class org.apache.logging.log4j.core.config.plugins.LoggersPlugin for element Loggers with params(Loggers={edu.cmu.sv})
+2014-11-26 13:23:02,322 WARN No Root logger was configured, creating default ERROR-level Root logger with Console appender
+2014-11-26 13:23:02,407 DEBUG Generated plugins in 0.085015000 seconds
+2014-11-26 13:23:02,497 DEBUG Registering MBean org.apache.logging.log4j2:type=sun.misc.Launcher$AppClassLoader@3f26f816
+2014-11-26 13:23:02,500 DEBUG Registering MBean org.apache.logging.log4j2:type=sun.misc.Launcher$AppClassLoader@3f26f816,component=StatusLogger
+2014-11-26 13:23:02,500 DEBUG Registering MBean org.apache.logging.log4j2:type=sun.misc.Launcher$AppClassLoader@3f26f816,component=ContextSelector
+2014-11-26 13:23:02,501 DEBUG Registering MBean org.apache.logging.log4j2:type=sun.misc.Launcher$AppClassLoader@3f26f816,component=Loggers,name=edu.cmu.sv
+2014-11-26 13:23:02,502 DEBUG Registering MBean org.apache.logging.log4j2:type=sun.misc.Launcher$AppClassLoader@3f26f816,component=Appenders,name=Console
+2014-11-26 13:23:02,503 DEBUG Registering MBean org.apache.logging.log4j2:type=sun.misc.Launcher$AppClassLoader@3f26f816,component=Appenders,name=RollingFile
+2014-11-26 13:23:02,503 DEBUG Registering MBean org.apache.logging.log4j2:type=sun.misc.Launcher$AppClassLoader@3f26f816,component=AsyncAppenders,name=Async_Appender
+2014-11-26 13:23:02,504 DEBUG Reconfiguration completed
+13:23:02.512 [main] INFO  edu.cmu.sv.ws.ssnoc.data.util.ConnectionPoolFactory - Creating a new ConnectionPoolFactory singleton instance.
+13:23:02.515 [main] INFO  edu.cmu.sv.ws.ssnoc.data.util.H2ConnectionPoolImpl - Initializing the connection pool ... 
+13:23:03.099 [main] TRACE edu.cmu.sv.ws.ssnoc.common.utils.PropertyUtils - Loading properties files ...
+13:23:03.101 [main] WARN  edu.cmu.sv.ws.ssnoc.common.utils.PropertyUtils - Could not load the properties file. Will try to initialize with system default values ...
+13:23:03.102 [main] WARN  edu.cmu.sv.ws.ssnoc.common.utils.PropertyUtils - Initializing DB_CONN_URL to system default values ...
+13:23:03.102 [main] WARN  edu.cmu.sv.ws.ssnoc.common.utils.PropertyUtils - Initializing DB_USERNAME to system default values ...
+13:23:03.102 [main] WARN  edu.cmu.sv.ws.ssnoc.common.utils.PropertyUtils - Initializing DB_USERNAME to system default values ...
+13:23:03.102 [main] WARN  edu.cmu.sv.ws.ssnoc.common.utils.PropertyUtils - Initializing DB_CONNECTION_POOL_SIZE to system default values ...
+13:23:03.102 [main] WARN  edu.cmu.sv.ws.ssnoc.common.utils.PropertyUtils - Initializing ADMIN_CODE to system default values ...
+13:23:03.138 [main] INFO  edu.cmu.sv.ws.ssnoc.data.util.H2ConnectionPoolImpl - Connection pool initialized successfully.
+sd
+13:23:03.440 [main] INFO  edu.cmu.sv.ws.ssnoc.data.dao.DAOFactory - Creating a new DAOFactory singleton instance.
+13:23:03.441 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.AnalysisDAOImpl - Enter - method : getClusters
+0
+0
+13:23:03.442 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.AnalysisDAOImpl - Enter - method :  ## getClusters ## 2014-11-26 13:23:03
+]]></system-out>
+  </testcase>
+  <testcase name="allUsersChatEachOther" classname="edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest" time="0.177"/>
+  <testcase name="noChatsBetweenAnyUser" classname="edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest" time="0.025">
+    <failure message="expected:&lt;[[A, B, C, D, E, admin]]&gt; but was:&lt;[[A, B, C, D, E]]&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;[[A, B, C, D, E, admin]]&gt; but was:&lt;[[A, B, C, D, E]]&gt;	at org.junit.Assert.fail(Assert.java:88)	at org.junit.Assert.failNotEquals(Assert.java:743)	at org.junit.Assert.assertEquals(Assert.java:118)	at org.junit.Assert.assertEquals(Assert.java:144)	at edu.cmu.sv.ws.ssnoc.test.AnalyzeNetworkTest.noChatsBetweenAnyUser(AnalyzeNetworkTest.java:123)</failure>
+    <system-out><![CDATA[sd
+13:23:03.696 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.AnalysisDAOImpl - Enter - method : getClusters
+-1
+0
+13:23:03.696 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.AnalysisDAOImpl - Enter - method :  ## getClusters ## 2014-11-26 12:23:03
+]]></system-out>
+  </testcase>
+</testsuite>

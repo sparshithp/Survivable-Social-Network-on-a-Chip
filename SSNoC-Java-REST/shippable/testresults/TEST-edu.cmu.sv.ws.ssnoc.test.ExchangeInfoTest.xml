@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest" time="0.24" tests="6" errors="1" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="24.65-b04"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/qihaozhu/Documents/study/CMU-SE/FSE/project/fse-F14-SB6-SSNoC-Java-REST"/>
+    <property name="java.runtime.version" value="1.7.0_67-b01"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/lc/2y1g9j9x5zz3jdlqczhyw3540000gn/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/qihaozhu/Documents/workspace/luna/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf5701891890594012254.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/qihaozhu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.9.5"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/qihaozhu"/>
+    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="qihaozhu"/>
+    <property name="java.class.path" value="/Users/qihaozhu/Documents/software/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.5.0.20140605-2032/jars/plexus-classworlds-2.5.1.jar"/>
+    <property name="org.slf4j.simpleLogger.defaultLogLevel" value="info"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.7.0_67"/>
+    <property name="java.ext.dirs" value="/Users/qihaozhu/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/qihaozhu/Documents/study/CMU-SE/FSE/project/fse-F14-SB6-SSNoC-Java-REST/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="nullUser" classname="edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest" time="0.202"/>
+  <testcase name="saveWallMessageNullUser" classname="edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest" time="0.016">
+    <error message="Unexpected exception, expected&lt;java.lang.Exception&gt; but was&lt;org.junit.ComparisonFailure&gt;" type="java.lang.Exception"><![CDATA[java.lang.Exception: Unexpected exception, expected<java.lang.Exception> but was<org.junit.ComparisonFailure>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest.saveWallMessageNullUser(ExchangeInfoTest.java:70)
+]]></error>
+    <system-out><![CDATA[13:23:03.958 [main] TRACE edu.cmu.sv.ws.ssnoc.rest.MessageService - Enter - method :  ## saveWallMessage ## [Ljava.lang.Object;@1c4ede86
+13:23:03.958 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Enter - method :  ## save ## {"content":"YooHoo","messageType":"WALL","messageID":0}
+13:23:03.959 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Statement executed, and 1 rows inserted.
+13:23:03.959 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Exit - method : save
+@@@@@@@@@@@@@@@@@@@@@null;null
+13:23:03.959 [main] TRACE edu.cmu.sv.ws.ssnoc.rest.MessageService - Exit - method : saveWallMessage
+13:23:03.960 [main] TRACE edu.cmu.sv.ws.ssnoc.rest.MessagesService - Enter - method : loadWallMessages
+13:23:03.960 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Enter - method : getWallMessages
+13:23:03.962 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Enter - method :  ## processResults ## com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy@73dc968f
+13:23:03.962 [main] DEBUG edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Executing stmt = com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy@73dc968f
+13:23:03.963 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Exit - method :  ## processResults ## [{"content":"askhdakshd","author":"admin","messageType":"WALL","target":"admin","postedAt":"2014-11-25 11:37:18","messageID":2}, {"content":"asdhaskhd","author":"admin","messageType":"WALL","target":"admin","postedAt":"2014-11-25 11:37:17","messageID":1}]
+13:23:03.968 [main] TRACE edu.cmu.sv.ws.ssnoc.rest.MessagesService - Exit - method :  ## loadWallMessages ## [{"content":"askhdakshd","author":"admin","messageType":"WALL","target":"admin","postedAt":"2014-11-25 11:37:18","messageID":2}, {"content":"asdhaskhd","author":"admin","messageType":"WALL","target":"admin","postedAt":"2014-11-25 11:37:17","messageID":1}]
+]]></system-out>
+  </testcase>
+  <testcase name="testloadChatMessages" classname="edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest" time="0.009"/>
+  <testcase name="testNullMessages" classname="edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest" time="0.001"/>
+  <testcase name="sqlErrorChatMessages" classname="edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest" time="0.005"/>
+  <testcase name="testloadWallMessages" classname="edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest" time="0.007">
+    <failure message="expected:&lt;[askhdakshd]&gt; but was:&lt;[YooHoo]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[askhdakshd]> but was:<[YooHoo]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at edu.cmu.sv.ws.ssnoc.test.ExchangeInfoTest.testloadWallMessages(ExchangeInfoTest.java:53)
+]]></failure>
+    <system-out><![CDATA[13:23:03.989 [main] TRACE edu.cmu.sv.ws.ssnoc.rest.MessageService - Enter - method :  ## saveWallMessage ## [Ljava.lang.Object;@204abe67
+13:23:03.989 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Enter - method :  ## save ## {"content":"YooHoo","author":"A","messageType":"WALL","target":"A","messageID":0}
+13:23:03.990 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Statement executed, and 1 rows inserted.
+13:23:03.990 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Exit - method : save
+@@@@@@@@@@@@@@@@@@@@@A;A
+13:23:03.990 [main] TRACE edu.cmu.sv.ws.ssnoc.rest.MessageService - Exit - method : saveWallMessage
+13:23:03.990 [main] TRACE edu.cmu.sv.ws.ssnoc.rest.MessagesService - Enter - method : loadWallMessages
+13:23:03.991 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Enter - method : getWallMessages
+13:23:03.991 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Enter - method :  ## processResults ## com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy@b1a6cc1
+13:23:03.991 [main] DEBUG edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Executing stmt = com.zaxxer.hikari.proxy.PreparedStatementJavassistProxy@b1a6cc1
+13:23:03.993 [main] TRACE edu.cmu.sv.ws.ssnoc.data.dao.MessageDAOImpl - Exit - method :  ## processResults ## [{"content":"askhdakshd","author":"admin","messageType":"WALL","target":"admin","postedAt":"2014-11-25 11:37:18","messageID":2}, {"content":"asdhaskhd","author":"admin","messageType":"WALL","target":"admin","postedAt":"2014-11-25 11:37:17","messageID":1}, {"content":"YooHoo","author":"A","messageType":"WALL","target":"A","messageID":24}]
+13:23:03.994 [main] TRACE edu.cmu.sv.ws.ssnoc.rest.MessagesService - Exit - method :  ## loadWallMessages ## [{"content":"askhdakshd","author":"admin","messageType":"WALL","target":"admin","postedAt":"2014-11-25 11:37:18","messageID":2}, {"content":"asdhaskhd","author":"admin","messageType":"WALL","target":"admin","postedAt":"2014-11-25 11:37:17","messageID":1}]
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,52 @@
+nav.navbar.navbar-default.navbar-fixed-top(role="navigation")#top-navbar
+  div.navbar-header
+    button(class="btn btn-sucess navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    p.navbar-brand #{title}
+      button(type='submit').btn.btn-default.search-symbol#openSearch
+        span.glyphicon.glyphicon-search
+
+  div.navbar-collapse.collapse
+    ul.nav.nav-justified#nav_list
+      li
+        a(href="/people")
+          strong People
+      li
+        a(href="/sharestatus")
+          strong Share Status
+      li
+        a(href="/wall")
+          strong Public Wall             
+      //li.dropdown
+      //  a(href="#" class="dropdown-toggle" data-toggle="dropdown")
+      //    strong Monitor
+      //  ul(class="dropdown-menu" role="menu")
+      //      li
+      //          a(href="/monitorpef")
+      //              strong Monitor Performance
+      //      li
+      //          a(href="/monitormem")
+      //              strong Monitor Memory
+      li#monperformance
+          a(href="/monperformance")
+              strong Monitor Performance
+      li#monmemory
+          a(href="/monmemory")
+              strong Monitor Memory
+
+      li#announcement
+          a(href="/announcement")
+              strong Announcement
+      li#analysis
+          a(href="/analysis")
+              strong Analysis
+      
+      li#adminUserProfile
+          a(href="/adminUserProfile")
+              strong Administer User Profile
+
+      li
+          a#logout(href="/logout")
+              strong Logout

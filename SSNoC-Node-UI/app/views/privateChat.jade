@@ -1,0 +1,25 @@
+doctype html
+html
+  include includes/head.jade
+  script(src='/js/jquery.cookie.js')
+  script(src='/js/privateChat.js')
+  title SSNoC - Private Chat
+  body
+    include includes/navbar.jade
+    br
+    input#targetName(type='hidden', value='#{target}')
+    input#authorName(type='hidden', value='#{author}') 
+    div.container
+      div.row
+        div.col-md-8.col-md-offset-2
+          div.panel.panel-primary
+            div.panel-heading
+              a.btn.btn-primary.btn-small(href="/people")
+                span.glyphicon.glyphicon-arrow-left
+            div.panel-body
+              ul#privateMessageList.media-list
+            div.panel-footer
+              div.input-group
+                input#inputPrivateMessage.form-control(type='text', placeholder='Enter message here...')
+                span.input-group-btn
+                  button#sendPrivateMessage.btn.btn-info(type='button') Send
